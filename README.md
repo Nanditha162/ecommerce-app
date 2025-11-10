@@ -1,3 +1,53 @@
+# E-Commerce App (Minimal Next.js + TypeScript)
+
+This repository contains a minimal e-commerce demo built with Next.js (React + TypeScript). It demonstrates browsing static product data, viewing product details, and a shopping cart implemented with React Context.
+
+## Features
+- Static product data (no database)
+- Product listing and detail pages
+- Global cart state using React Context
+- Cart drawer (add/remove/clear)
+- Minimal responsive styling
+
+## Technical architecture
+
+- Framework: Next.js (React) with TypeScript
+- Global state: React Context (`context/CartContext.tsx`)
+- Components: `ProductList`, `ProductCard`, `CartDrawer`, `Header`
+- Data: `data/products.ts` contains a static `products` array
+
+## Files of interest
+
+- `pages/index.tsx` — home page showing product list
+- `pages/product/[id].tsx` — product detail page
+- `components/ProductList.tsx` — lists products
+- `components/ProductCard.tsx` — card UI for each product
+- `components/CartDrawer.tsx` — slide-over cart UI
+- `context/CartContext.tsx` — cart state and actions
+
+## Setup
+
+Install dependencies and run the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+## Testing / Quick checks
+
+- Add a product to the cart from the product card or product detail page.
+- Open the cart using the `Cart (N)` button in the header to view/remove/clear items.
+
+## Notes & next steps
+
+- This is intentionally minimal. Possible follow-ups:
+  - Persist cart to localStorage
+  - Add quantity increment/decrement controls
+  - Implement checkout flow
+  - Add unit tests (Jest/React Testing Library)
 # ecommerce-app
 # Minimal E‑commerce Prototype
 
